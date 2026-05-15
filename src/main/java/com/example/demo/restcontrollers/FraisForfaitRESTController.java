@@ -6,10 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/fraisforfait")
-@CrossOrigin(origins = "http://localhost:4200")
 
 public class FraisForfaitRESTController {
 
@@ -22,7 +23,7 @@ public class FraisForfaitRESTController {
     }
 
     @GetMapping("/{id}")
-    public FraisForfaitDTO getFraisForfaitById(@PathVariable("id") Long id) {
+    public Optional<FraisForfaitDTO> getFraisForfaitById(@PathVariable("id") Long id) {
         return fraisForfaitService.getFraisForfaitById(id);
     }
 

@@ -19,7 +19,7 @@ public class Visiteur {
     private Long id;
  
  @OneToMany(mappedBy = "visiteur", cascade = CascadeType.ALL, fetch=FetchType.EAGER)
- private List<FicheFrais> fichesFrais  = new ArrayList<>();
+//private List<FicheFrais> fichesFrais  = new ArrayList<>();
 
     public Long getId() {
 		return id;
@@ -93,13 +93,13 @@ public class Visiteur {
 		this.mdp = mdp;
 	}
 
-	public List<FicheFrais> getFichesFrais() {
-		return fichesFrais;
-	}
+    //public List<FicheFrais> getFichesFrais() {
+//		return fichesFrais;
+	//}
 
-	public void setFichesFrais(List<FicheFrais> fichesFrais) {
-		this.fichesFrais = fichesFrais;
-	}
+//	public void setFichesFrais(List<FicheFrais> fichesFrais) {
+	//	this.fichesFrais = fichesFrais;
+	//}
 
 	private String nom;
     private String prenom;

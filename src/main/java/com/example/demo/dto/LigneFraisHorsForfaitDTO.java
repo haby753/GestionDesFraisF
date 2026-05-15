@@ -6,65 +6,46 @@ import java.time.LocalDate;
 
 public class LigneFraisHorsForfaitDTO {
 
-    private Long id;
-    private Double montant;
-    private String description;
-   
-
-	private FicheFraisDTO ficheFraisId; // Id de la fiche de frais associée
-    public FicheFraisDTO getFicheFraisId() {
+	private Long id;
+    public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public Double getMontant() {
+		return montant;
+	}
+	public void setMontant(Double montant) {
+		this.montant = montant;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public Long getFicheFraisId() {
 		return ficheFraisId;
 	}
-
-	public void setFicheFraisId(FicheFraisDTO ficheFraisId) {
+	public void setFicheFraisId(Long ficheFraisId) {
 		this.ficheFraisId = ficheFraisId;
 	}
-
-	private LocalDate date;
-    public VisiteurDTO getIdvisiteur() {
-		return idvisiteur;
+	public Long getVisiteurId() {
+		return visiteurId;
 	}
-
-	public void setIdvisiteur(VisiteurDTO idvisiteur) {
-		this.idvisiteur = idvisiteur;
+	public void setVisiteurId(Long visiteurId) {
+		this.visiteurId = visiteurId;
 	}
-
-	private VisiteurDTO idvisiteur;
-    
-  
-	
-   
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Double getMontant() {
-        return montant;
-    }
-
-    public void setMontant(Double montant) {
-        this.montant = montant;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-   
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
+	public LocalDate getDate() {
+		return date;
+	}
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+	private Double montant;
+    private String description;
+    private Long ficheFraisId;
+    private Long visiteurId;
+    private LocalDate date;
 }

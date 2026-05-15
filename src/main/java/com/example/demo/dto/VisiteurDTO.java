@@ -1,7 +1,7 @@
 package com.example.demo.dto;
 
 import java.time.LocalDate;
-import java.util.List;
+
 
 public class VisiteurDTO {
 	
@@ -82,7 +82,6 @@ public class VisiteurDTO {
 				+ ville + ", cp=" + cp + ", dateEmbauche=" + dateEmbauche + ", login=" + login + ", mdp=" + mdp
 				 + "]";
 	}
- // Mois associés aux fiches frais
-
+ 
     // Getters et setters
 }

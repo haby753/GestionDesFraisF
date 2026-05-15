@@ -24,7 +24,7 @@ public class VisiteurService {
 
     public List<VisiteurDTO> getAllVisiteurs() {
         List<Visiteur> visiteurs = visiteurRepository.findAll();
-        visiteurs.forEach(visiteur -> Hibernate.initialize(visiteur.getFichesFrais())); // Initialise la collection
+      //  visiteurs.forEach(visiteur -> Hibernate.initialize(visiteur.getFichesFrais())); // Initialise la collection
         return visiteurs.stream()
                 .map(this::convertToDTO)
                 .collect(Collectors.toList());
@@ -43,6 +43,11 @@ public class VisiteurService {
 
     public void deleteVisiteur(Long id) {
         visiteurRepository.deleteById(id);
+    }
+    
+    
+    public Visiteur getVisiteurByLogin(String login) {
+        return visiteurRepository.findByLogin(login);
     }
 
     private VisiteurDTO convertToDTO(Visiteur visiteur) {

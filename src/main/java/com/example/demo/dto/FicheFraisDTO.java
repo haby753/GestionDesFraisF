@@ -2,8 +2,6 @@ package com.example.demo.dto;
 
 import java.time.LocalDate;
 
-import com.example.demo.entity.Etat;
-import com.example.demo.entity.Visiteur;
 
 
 

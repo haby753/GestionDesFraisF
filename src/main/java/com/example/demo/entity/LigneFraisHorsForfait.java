@@ -43,8 +43,6 @@ public class LigneFraisHorsForfait {
 		this.visiteur = visiteur;
 	}
 
-
-
     // Getters et Setters
     public Long getId() {
         return id;
